@@ -4,17 +4,17 @@ public class SemtenciaDoWhile {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int contador = 1;
-        String respuesta;
+        char respuesta;
 
         do {
-            System.out.println(contador);
+            System.out.println("contador:"+contador);
             contador++;
 
             System.out.println("Quieres continuar?");
             System.out.println("(s: sí, n: no)");
-            respuesta = scanner.nextLine();
+            respuesta = scanner.next().charAt(0);
 
-        } while (respuesta.equals("s"));
+        } while (respuesta != 'n');
         System.out.println("Finalizando");
     }
 }
